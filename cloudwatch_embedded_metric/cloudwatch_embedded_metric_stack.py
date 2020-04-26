@@ -4,6 +4,19 @@ from aws_cdk import aws_apigateway as _apigw
 from aws_cdk import core
 
 
+class global_args:
+    """"
+    Helper to define global statics
+    """
+
+    OWNER = "MystiqueAutomation"
+    ENVIRONMENT = "production"
+    REPO_NAME = "cloudwatch-embedded-metric"
+    SOURCE_INFO = f"https://github.com/miztiik/{REPO_NAME}"
+    VERSION = "2020_04_36"
+    MIZTIIK_SUPPORT_EMAIL = ["mystique@example.com", ]
+
+
 class LambdaEmbeddedMetricsStack(core.Stack):
 
     def __init__(self, scope: core.Construct, id: str, **kwargs) -> None:
@@ -60,9 +73,17 @@ class LambdaEmbeddedMetricsStack(core.Stack):
         user_id = api_01.root.add_resource("user_id")
         add_user_likes = user_id.add_resource("{likes}")
         add_user_likes.add_method("GET")
+        ###########################################
+        ################# OUTPUTS #################
+        ###########################################
 
+        output_0 = core.CfnOutput(self,
+                                  "AutomationFrom",
+                                  value=f"{global_args.SOURCE_INFO}",
+                                  description="To know more about this automation stack, check out our github page."
+                                  )
         output_1 = core.CfnOutput(self,
-                                  "lambda-embedded-metrics-url",
+                                  "ApiUrl",
                                   value=f"{add_user_likes.url}",
                                   description="Use a browser to push the user likes to CW Logs, replace {likes} with your like value"
                                   )
