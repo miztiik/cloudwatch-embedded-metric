@@ -66,40 +66,40 @@ Follow this article in **[Youtube](https://www.youtube.com/c/ValaxyTechnologies)
         - For example `https://877bvvfqnb.execute-api.us-east-1.amazonaws.com/myst/user_id/69`
         - Use this Url in the browser, you should see something similar,
 
-    ```json
-    {
-    "message": {
-        "_per_user_": "kon",
-        "Environment": "production",
-        "_aws": {
-        "CloudWatchMetrics": [
-            {
-            "Namespace": "konstone-verse",
-            "Dimensions": [
-                [
-                "_per_user_",
-                "Environment"
-                ]
-            ],
-            "Metrics": [
+        ```json
+        {
+        "message": {
+            "_per_user_": "kon",
+            "Environment": "production",
+            "_aws": {
+            "CloudWatchMetrics": [
                 {
-                "Name": "likes_counter",
-                "Unit": "Count"
+                "Namespace": "konstone-verse",
+                "Dimensions": [
+                    [
+                    "_per_user_",
+                    "Environment"
+                    ]
+                ],
+                "Metrics": [
+                    {
+                    "Name": "likes_counter",
+                    "Unit": "Count"
+                    }
+                ]
                 }
-            ]
-            }
-        ],
-        "Timestamp": 1587907680350
-        },
-        "likes_counter": 69
-    }
-    }
+            ],
+            "Timestamp": 1587907680350
+            },
+            "likes_counter": 69
+        }
+        }
     ```
 
     - Navigate to `CloudWatch Metric` dashboard, you will find a new namespace `konstone-verse` along with a metric `likes_counter`
 
     You should be able to notice graphs similar to this,
-    ![Miztiik Serverless Lambda Profiler AWS XRay](images/miztiik-cloudwatch-embedded-metric-format-for-aws-lambda-results.png)
+    ![Miztiik Cloudwatch Embedded Metric for AWS Lambda](images/miztiik-cloudwatch-embedded-metric-format-for-aws-lambda-results.png)
 
 1. ## 🧹 CleanUp
 

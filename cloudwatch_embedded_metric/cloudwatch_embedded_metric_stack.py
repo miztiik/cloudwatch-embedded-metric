@@ -51,6 +51,7 @@ class LambdaEmbeddedMetricsStack(core.Stack):
         konstone_lg = _logs.LogGroup(self,
                                      "konstoneLoggroup",
                                      log_group_name=f"/aws/lambda/{konstone_embedded_metric_fn.function_name}",
+                                     retention=_logs.RetentionDays.ONE_WEEK,
                                      removal_policy=core.RemovalPolicy.DESTROY
                                      )
 
