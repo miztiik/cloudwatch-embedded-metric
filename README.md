@@ -94,12 +94,13 @@ Follow this article in **[Youtube](https://www.youtube.com/c/ValaxyTechnologies)
             "likes_counter": 69
         }
         }
-    ```
+        ```
 
     - Navigate to `CloudWatch Metric` dashboard, you will find a new namespace `konstone-verse` along with a metric `likes_counter`
 
-    You should be able to notice graphs similar to this,
-    ![Miztiik Cloudwatch Embedded Metric for AWS Lambda](images/miztiik-cloudwatch-embedded-metric-format-for-aws-lambda-results.png)
+        You should be able to notice graphs similar to this,
+
+        ![Miztiik Cloudwatch Embedded Metric for AWS Lambda](images/miztiik-cloudwatch-embedded-metric-format-for-aws-lambda-results.png)
 
 1. ## 🧹 CleanUp
 
