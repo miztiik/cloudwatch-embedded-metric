@@ -6,20 +6,20 @@ with open("README.md") as fp:
 
 
 setuptools.setup(
-    name="lambda_embedded_metrics",
+    name="cloudwatch_embedded_metric",
     version="0.0.1",
 
-    description="An empty CDK Python app",
+    description="cloudwatch_embedded_metric",
     long_description=long_description,
     long_description_content_type="text/markdown",
 
-    author="author",
+    author="Mystique",
 
-    package_dir={"": "lambda_embedded_metrics"},
-    packages=setuptools.find_packages(where="lambda_embedded_metrics"),
+    package_dir={"": "cloudwatch_embedded_metric"},
+    packages=setuptools.find_packages(where="cloudwatch_embedded_metric"),
 
     install_requires=[
-        "aws-cdk.core==1.34.0",
+        "aws-cdk.core==1.35.0",
     ],
 
     python_requires=">=3.6",
