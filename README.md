@@ -131,6 +131,9 @@ Follow this article in **[Youtube](https://www.youtube.com/c/ValaxyTechnologies)
 
 1. [Specification: Embedded Metric Format](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Embedded_Metric_Format_Specification.html)
 
+1. [CloudWatch Embedded Metric Format Client Library](https://github.com/awslabs/aws-embedded-metrics-python)
+1. [Python Lambda Client Lib Sample Code](https://github.com/awslabs/aws-embedded-metrics-python/blob/master/examples/lambda/function.py)
+
 ### 🏷️ Metadata
 
 **Level**: 300
